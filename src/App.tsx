@@ -21,26 +21,87 @@ type Question = {
 
 const BANK: Question[] = [
   // ───────── BEGINNER (12) ─────────
+  // 5 fun, 5 product, 2 industry
   {
     id: "b1",
     level: "beginner",
-    topic: "company",
-    q: "What is Base, and who built it?",
+    topic: "company-fun-facts",
+    q: "Who are the two co-founders of Coinbase, the parent of Base?",
     options: [
-      "Coinbase's L2 built on top of the OP Stack rollup",
-      "A Solana sidechain operated by the Helium core team",
-      "An Ethereum mainnet client maintained by ConsenSys",
-      "A self-custody wallet maintained by Trust Wallet team",
+      "Brian Armstrong and Fred Ehrsam, who met via Reddit",
+      "Vitalik Buterin and Gavin Wood, of the early Ethereum",
+      "Changpeng Zhao and He Yi, who built the Binance group",
+      "Jesse Powell and Thanh Luu, who built Kraken exchange",
     ],
     answer: 0,
     explain:
-      "Base is the L2 incubated by Coinbase, built on the OP Stack, the same stack that powers Optimism.",
+      "Coinbase was co-founded in 2012 by Brian Armstrong (a former Airbnb engineer) and Fred Ehrsam (a former Goldman Sachs currency trader). They met on the Bitcoin subreddit.",
   },
   {
     id: "b2",
     level: "beginner",
-    topic: "networks",
-    q: "Which networks does CDP Node currently support?",
+    topic: "company-fun-facts",
+    q: "In what year was Coinbase, the company behind Base, founded?",
+    options: [
+      "2012, the same year it joined Y Combinator's S12 batch",
+      "2010, the same year as the famous Bitcoin pizza buy day",
+      "2014, the same year as the original Mt Gox exchange fall",
+      "2017, the year of the original ICO bull run on Ethereum",
+    ],
+    answer: 0,
+    explain:
+      "Coinbase was founded in 2012 and joined Y Combinator's Summer 2012 (S12) batch the same year, originally pitched as 'Bitbank.'",
+  },
+  {
+    id: "b3",
+    level: "beginner",
+    topic: "company-fun-facts",
+    q: "What stock ticker does Coinbase trade under on Nasdaq today?",
+    options: [
+      "COIN, the ticker assigned for its 2021 direct listing",
+      "CBSE, the ticker often guessed but never used by them",
+      "CNBS, the ticker often confused with the cable network",
+      "CBNE, the ticker briefly suggested in early IPO drafts",
+    ],
+    answer: 0,
+    explain:
+      "Coinbase trades on Nasdaq under the ticker COIN, assigned at its April 14, 2021 direct listing.",
+  },
+  {
+    id: "b4",
+    level: "beginner",
+    topic: "company-fun-facts",
+    q: "What is the iconic brand color of the Coinbase wordmark?",
+    options: [
+      "A signature cobalt blue used in the Coinbase logo",
+      "A vivid magenta used in the Polygon brand wordmark",
+      "A deep hunter green used in the ConsenSys product",
+      "A bright sunset orange used by the Solana branding",
+    ],
+    answer: 0,
+    explain:
+      "Coinbase's brand color is its signature cobalt blue (hex #0052FF), used across the wordmark and CDP visual identity.",
+  },
+  {
+    id: "b5",
+    level: "beginner",
+    topic: "company-fun-facts",
+    q: "Which famous startup accelerator did Coinbase graduate from?",
+    options: [
+      "Y Combinator, in the Summer 2012 (S12) cohort batch",
+      "Techstars, in the New York City Summer 2012 cohort",
+      "500 Startups, in the early Mountain View 2012 batch",
+      "AngelPad, in the original Bay Area Summer 2012 batch",
+    ],
+    answer: 0,
+    explain:
+      "Coinbase went through Y Combinator's Summer 2012 (S12) batch, applying under the original name 'Bitbank.'",
+  },
+  {
+    id: "b6",
+    level: "beginner",
+    topic: "company-products",
+    q: "Which networks does CDP Node currently support out of the box?",
     options: [
       "Base Mainnet and Base Sepolia testnet, both included",
       "Ethereum mainnet, Polygon mainnet, plus Base Mainnet",
@@ -49,13 +110,13 @@ const BANK: Question[] = [
     ],
     answer: 0,
     explain:
-      "CDP Node is Base-only today. Base Mainnet plus Base Sepolia testnet on the same project.",
+      "CDP Node is Base-only today: Base Mainnet plus Base Sepolia testnet on the same project.",
   },
   {
-    id: "b3",
+    id: "b7",
     level: "beginner",
-    topic: "company",
-    q: "What does the acronym CDP stand for in this context?",
+    topic: "company-products",
+    q: "What does the acronym CDP stand for in Coinbase's product line?",
     options: [
       "Coinbase Developer Platform, the umbrella product line",
       "Coinbase Direct Pipeline, a wallet-connect mode line",
@@ -64,30 +125,30 @@ const BANK: Question[] = [
     ],
     answer: 0,
     explain:
-      "CDP is Coinbase Developer Platform, the umbrella for Node, Server Wallet, Paymaster, AgentKit, and more.",
+      "CDP is the Coinbase Developer Platform, the umbrella for Node, Server Wallet, Paymaster, Onramp, AgentKit, and more.",
   },
   {
-    id: "b4",
+    id: "b8",
     level: "beginner",
-    topic: "company",
-    q: "What is Coinbase Cloud's tagline for the CDP product line?",
+    topic: "company-products",
+    q: "What is the main job of the CDP Server Wallet product?",
     options: [
-      "Trusted crypto infrastructure to power your business",
-      "The fastest blockchain RPC for any chain you build on",
-      "Build, ship, and scale your dApp on Solana with ease",
-      "One platform for every onchain idea your team has now",
+      "A backend wallet API for signing and broadcasting txs",
+      "A self-custody mobile wallet app for end retail users",
+      "A hosted explorer that decodes wallet activity history",
+      "A custodial exchange wallet behind Coinbase Pro trades",
     ],
     answer: 0,
     explain:
-      "The published CDP tagline is 'Trusted crypto infrastructure to power your business.'",
+      "Server Wallet is a backend API for programmatic wallets: key management, signing, broadcasting, and policy evaluation from your server.",
   },
   {
-    id: "b5",
+    id: "b9",
     level: "beginner",
-    topic: "billing",
-    q: "How many free Billing Units does CDP Node include per month?",
+    topic: "company-products",
+    q: "How many free Billing Units does CDP Node include each month?",
     options: [
-      "10 million BU per calendar month, no rollover allowed",
+      "10 million BU per calendar month, with no rollover",
       "1 million BU per calendar month, with monthly rollover",
       "25 million BU per calendar month, with weekly resets",
       "50 million BU per calendar month, with annual resets",
@@ -97,70 +158,40 @@ const BANK: Question[] = [
       "CDP Node's free tier is 10 million BU per calendar month. It resets the first of the month and does not roll over.",
   },
   {
-    id: "b6",
+    id: "b10",
     level: "beginner",
-    topic: "company",
-    q: "Which company is the parent of the Base L2 network?",
+    topic: "company-products",
+    q: "What is Base Sepolia in the CDP Node product surface?",
     options: [
-      "Coinbase, the publicly listed crypto exchange company",
-      "Optimism, the team behind the OP Stack rollup design",
-      "Polygon, the team behind PoS, zkEVM, and CDK rollups",
-      "Arbitrum, the team behind Nitro and Stylus rollup tech",
-    ],
-    answer: 0,
-    explain:
-      "Base is incubated and operated by Coinbase. Optimism wrote the OP Stack that Base is built on, but Coinbase is Base's parent.",
-  },
-  {
-    id: "b7",
-    level: "beginner",
-    topic: "networks",
-    q: "What is Base Sepolia in CDP Node's product surface?",
-    options: [
-      "Base's public testnet, available alongside Base Mainnet",
+      "Base's public testnet, served alongside Base Mainnet",
       "Base's archive node with deep historical state queries",
       "Base's staking network for validator slashing data feed",
       "Base's beta sequencer for the next OP Stack hard fork",
     ],
     answer: 0,
     explain:
-      "Base Sepolia is the public Base testnet. CDP Node serves both Base Mainnet and Base Sepolia.",
+      "Base Sepolia is the public Base testnet. CDP Node serves both Base Mainnet and Base Sepolia from the same project.",
   },
   {
-    id: "b8",
+    id: "b11",
     level: "beginner",
-    topic: "brand",
-    q: "Which color is Coinbase's signature brand wordmark color?",
-    options: [
-      "Cobalt blue, the iconic Coinbase logo and brand color",
-      "Hunter green, used by ConsenSys for its product lines",
-      "Vivid magenta, used by Polygon for its brand mark only",
-      "Sunset orange, used by Solana mainstream brand themes",
-    ],
-    answer: 0,
-    explain:
-      "Coinbase's brand color is its signature cobalt blue, used in the wordmark and the new CDP visual identity.",
-  },
-  {
-    id: "b9",
-    level: "beginner",
-    topic: "rpc",
+    topic: "industry",
     q: "What does the acronym RPC stand for in this product context?",
     options: [
-      "Remote Procedure Call, the standard JSON-RPC interface",
-      "Rapid Protocol Channel, a new Coinbase wire format spec",
-      "Rollup Permission Code, a Base sequencer auth token name",
-      "Realtime Pipeline Cache, a Coinbase data product offering",
+      "Remote Procedure Call, the JSON-RPC standard format",
+      "Rapid Protocol Channel, a Coinbase wire format spec",
+      "Rollup Permission Code, a Base sequencer auth token",
+      "Realtime Pipeline Cache, a Coinbase data product API",
     ],
     answer: 0,
     explain:
-      "RPC stands for Remote Procedure Call. Ethereum nodes expose a standard JSON-RPC interface.",
+      "RPC stands for Remote Procedure Call. EVM nodes expose a standard JSON-RPC interface for methods like eth_call.",
   },
   {
-    id: "b10",
+    id: "b12",
     level: "beginner",
-    topic: "rpc",
-    q: "What is JSON-RPC, in simple plain terms for builders?",
+    topic: "industry",
+    q: "What is JSON-RPC, in plain terms for an app developer?",
     options: [
       "A standard request format used to talk to a chain node",
       "A signed transaction format broadcast over P2P gossip",
@@ -169,44 +200,90 @@ const BANK: Question[] = [
     ],
     answer: 0,
     explain:
-      "JSON-RPC is the request/response format Ethereum-style chains use. Methods like eth_call, eth_getLogs all go over JSON-RPC.",
-  },
-  {
-    id: "b11",
-    level: "beginner",
-    topic: "networks",
-    q: "What is the typical block time on the Base Mainnet network?",
-    options: [
-      "About 2 seconds per block on the Base Mainnet network",
-      "About 12 seconds per block, like Ethereum mainnet does",
-      "About 400 milliseconds, like the Solana mainnet block",
-      "About 30 seconds per block on Base Mainnet right now",
-    ],
-    answer: 0,
-    explain:
-      "Base targets about 2 second blocks. Ethereum mainnet is about 12 seconds, Solana is sub-second.",
-  },
-  {
-    id: "b12",
-    level: "beginner",
-    topic: "networks",
-    q: "In which year did the Base Mainnet network officially launch?",
-    options: [
-      "2023, with Coinbase's incubation of the L2 network",
-      "2021, just after the original Optimism mainnet launch",
-      "2022, alongside Coinbase Wallet Smart Wallet rollout",
-      "2024, alongside the Cancun hard fork EIP-4844 blobs",
-    ],
-    answer: 0,
-    explain:
-      "Base Mainnet went live in 2023, incubated by Coinbase and built on the OP Stack.",
+      "JSON-RPC is the request/response format EVM-style chains use. Methods like eth_call, eth_getLogs all go over JSON-RPC.",
   },
 
   // ───────── INTERMEDIATE (12) ─────────
+  // 5 fun, 5 product, 2 industry
   {
     id: "i1",
     level: "intermediate",
-    topic: "billing",
+    topic: "company-fun-facts",
+    q: "On what date did Coinbase go public on Nasdaq via direct listing?",
+    options: [
+      "April 14, 2021, with reference price set at $250",
+      "April 14, 2020, with reference price set at $250",
+      "October 5, 2021, with reference price set at $381",
+      "January 12, 2022, with reference price set at $250",
+    ],
+    answer: 0,
+    explain:
+      "Coinbase went public on Nasdaq via direct listing on April 14, 2021. Nasdaq set a reference price of $250 the day before.",
+  },
+  {
+    id: "i2",
+    level: "intermediate",
+    topic: "company-fun-facts",
+    q: "Who led Coinbase's $5M Series A funding round back in May 2013?",
+    options: [
+      "Union Square Ventures, with Fred Wilson on the lead",
+      "Andreessen Horowitz, with Marc Andreessen on the lead",
+      "Sequoia Capital, with Roelof Botha leading the round",
+      "Founders Fund, with Peter Thiel leading the A round",
+    ],
+    answer: 0,
+    explain:
+      "Coinbase's $5M Series A in May 2013 was led by Union Square Ventures (Fred Wilson). Ribbit Capital, SV Angel, and FundersClub also took part.",
+  },
+  {
+    id: "i3",
+    level: "intermediate",
+    topic: "company-fun-facts",
+    q: "When did the Base Mainnet network officially open to all users?",
+    options: [
+      "August 9, 2023, alongside the Onchain Summer launch",
+      "August 9, 2022, alongside the Onchain Summer launch",
+      "February 23, 2023, with the original developer beta",
+      "December 15, 2023, alongside the Optimism Bedrock fork",
+    ],
+    answer: 0,
+    explain:
+      "Base Mainnet opened to all users on August 9, 2023, kicking off the multi-week 'Onchain Summer' launch event.",
+  },
+  {
+    id: "i4",
+    level: "intermediate",
+    topic: "company-fun-facts",
+    q: "Who at Coinbase is the public face and lead of the Base L2 network?",
+    options: [
+      "Jesse Pollak, who also leads Coinbase Wallet now",
+      "Paul Grewal, who leads the Coinbase legal team now",
+      "Emilie Choi, who leads the Coinbase Ventures group",
+      "Surojit Chatterjee, who once led the product group",
+    ],
+    answer: 0,
+    explain:
+      "Jesse Pollak created Base and leads it. In late 2024 he joined the Coinbase exec team and also took the lead on Coinbase Wallet.",
+  },
+  {
+    id: "i5",
+    level: "intermediate",
+    topic: "company-fun-facts",
+    q: "Where is Coinbase's official corporate headquarters located today?",
+    options: [
+      "Nowhere, Coinbase declared no HQ in February 2021",
+      "San Francisco, in the original SoMa office building",
+      "New York City, in a Manhattan financial district tower",
+      "Wilmington, Delaware, in a small registered office park",
+    ],
+    answer: 0,
+    explain:
+      "After moving remote-first in May 2020, Coinbase declared in February 2021 that it has no headquarters and is a 'decentralized company.'",
+  },
+  {
+    id: "i6",
+    level: "intermediate",
+    topic: "company-products",
     q: "How many BU does a Standard JSON-RPC method consume per call?",
     options: [
       "30 BU per call (eth_call, eth_getBalance, eth_chainId)",
@@ -216,12 +293,12 @@ const BANK: Question[] = [
     ],
     answer: 0,
     explain:
-      "Standard methods are 30 BU per call on CDP Node. eth_call, eth_getBalance, eth_chainId, eth_blockNumber all sit in this tier.",
+      "Standard methods are 30 BU per call on CDP Node. eth_call, eth_getBalance, eth_chainId, eth_blockNumber sit in this tier.",
   },
   {
-    id: "i2",
+    id: "i7",
     level: "intermediate",
-    topic: "billing",
+    topic: "company-products",
     q: "How many BU does an Enhanced JSON-RPC method consume per call?",
     options: [
       "100 BU per call (eth_getLogs, eth_getTransactionReceipt)",
@@ -234,25 +311,10 @@ const BANK: Question[] = [
       "Enhanced methods are 100 BU per call on CDP Node. That includes eth_getLogs, eth_getTransactionReceipt, eth_getBlockByNumber, eth_estimateGas.",
   },
   {
-    id: "i3",
+    id: "i8",
     level: "intermediate",
-    topic: "billing",
-    q: "How many BU does an Advanced JSON-RPC method consume per call?",
-    options: [
-      "500 BU per call (debug_trace*, eth_sendRawTransaction)",
-      "250 BU per call (matches Alchemy's eth_sendRawTransaction)",
-      "1000 BU per call (matches Chainstack's premium weights)",
-      "150 BU per call (matches QuickNode's standard credits)",
-    ],
-    answer: 0,
-    explain:
-      "Advanced methods are 500 BU per call on CDP Node. debug_traceTransaction, trace_block, eth_sendRawTransaction sit here.",
-  },
-  {
-    id: "i4",
-    level: "intermediate",
-    topic: "pricing",
-    q: "What is the CDP Node overage rate for usage above the free tier?",
+    topic: "company-products",
+    q: "What is the CDP Node overage rate above the monthly free tier?",
     options: [
       "$0.50 per 1,000,000 BU above the 10M monthly free tier",
       "$0.40 per 1,000,000 BU above the 10M monthly free tier",
@@ -264,54 +326,9 @@ const BANK: Question[] = [
       "CDP Node bills $0.50 per million BU above the 10M free tier. $0.40 is Alchemy's PAYG rate, not Coinbase's.",
   },
   {
-    id: "i5",
+    id: "i9",
     level: "intermediate",
-    topic: "rpc",
-    q: "What is CDP Node's published per-project rate-limit ceiling?",
-    options: [
-      "7,500 BU per 5 seconds, about 50 RPS at 30 BU average",
-      "5,000 BU per 5 seconds, about 30 RPS at 30 BU average",
-      "10,000 BU per 5 seconds, about 60 RPS at 30 BU average",
-      "15,000 BU per 5 seconds, about 100 RPS at 30 BU average",
-    ],
-    answer: 0,
-    explain:
-      "Per-project ceiling is 7,500 BU per 5 seconds, about 50 requests per second at the 30 BU average.",
-  },
-  {
-    id: "i6",
-    level: "intermediate",
-    topic: "billing",
-    q: "When does CDP Node start requiring a payment method on file?",
-    options: [
-      "Starting January 2026, free tier still applies as before",
-      "Starting January 2025, free tier still applies as before",
-      "Starting June 2026, free tier ends and PAYG is required",
-      "Starting June 2025, free tier ends and PAYG is required",
-    ],
-    answer: 0,
-    explain:
-      "Starting January 2026 a payment method is required on file. The 10M BU free tier still applies.",
-  },
-  {
-    id: "i7",
-    level: "intermediate",
-    topic: "billing",
-    q: "How does the CDP Node free tier reset across calendar months?",
-    options: [
-      "Resets first day of each calendar month, no rollover",
-      "Resets first day of each calendar quarter, with rollover",
-      "Resets every 30 days from project creation, no rollover",
-      "Resets every Monday morning UTC time zone, no rollover",
-    ],
-    answer: 0,
-    explain:
-      "The 10M BU free tier resets the first day of each calendar month and does not roll over.",
-  },
-  {
-    id: "i8",
-    level: "intermediate",
-    topic: "wallet",
+    topic: "company-products",
     q: "How is the CDP Server Wallet add-on actually billed each month?",
     options: [
       "$0.005 per op, with the first 5,000 ops free per month",
@@ -324,10 +341,10 @@ const BANK: Question[] = [
       "Server Wallet is $0.005 per op, with 5,000 ops per month free. Ops include signing, broadcasting, and policy evaluation.",
   },
   {
-    id: "i9",
+    id: "i10",
     level: "intermediate",
-    topic: "products",
-    q: "What problem does the CDP Paymaster product primarily solve?",
+    topic: "company-products",
+    q: "What problem does the CDP Paymaster product primarily solve for apps?",
     options: [
       "Gas sponsorship so users don't need to hold ETH on Base",
       "Gas indexing so analysts don't need to query trace_block",
@@ -339,39 +356,9 @@ const BANK: Question[] = [
       "Paymaster sponsors gas for end users so they don't need to hold ETH on Base, paired with Smart Wallet and ERC-4337.",
   },
   {
-    id: "i10",
-    level: "intermediate",
-    topic: "billing",
-    q: "Which CDP Node BU class does the eth_getLogs RPC method fall into?",
-    options: [
-      "Enhanced 100 BU class, alongside eth_getTransactionReceipt",
-      "Standard 30 BU class, alongside basic eth_call read methods",
-      "Advanced 500 BU class, alongside debug_traceTransaction calls",
-      "Custom 250 BU class, alongside eth_sendRawTransaction calls",
-    ],
-    answer: 0,
-    explain:
-      "eth_getLogs is in the Enhanced 100 BU class along with eth_getTransactionReceipt and eth_getBlockByNumber.",
-  },
-  {
     id: "i11",
     level: "intermediate",
-    topic: "billing",
-    q: "Which BU class does eth_sendRawTransaction belong to on CDP Node?",
-    options: [
-      "Advanced 500 BU class, alongside debug_traceTransaction now",
-      "Enhanced 100 BU class, alongside eth_getLogs and receipts now",
-      "Standard 30 BU class, alongside eth_call basic reads on Base",
-      "Premium 250 BU class, alongside trace_block and trace_filter",
-    ],
-    answer: 0,
-    explain:
-      "eth_sendRawTransaction is Advanced 500 BU. Writes are heavier than reads because they touch the sequencer path.",
-  },
-  {
-    id: "i12",
-    level: "intermediate",
-    topic: "networks",
+    topic: "industry",
     q: "Which rollup framework is the Base Mainnet network built on top of?",
     options: [
       "OP Stack, the open rollup framework from Optimism today",
@@ -383,105 +370,121 @@ const BANK: Question[] = [
     explain:
       "Base is built on the OP Stack, Optimism's open-source rollup framework. Polygon CDK, Arbitrum Orbit, and ZK Stack are competitors.",
   },
-
-  // ───────── EXPERT (12) ─────────
   {
-    id: "e1",
-    level: "expert",
-    topic: "billing",
-    q: "Exact BU weight for debug_traceTransaction on CDP Node today?",
+    id: "i12",
+    level: "intermediate",
+    topic: "industry",
+    q: "What is the typical block time on the Base Mainnet network today?",
     options: [
-      "500 BU per call, in the Advanced method tier on Base",
-      "250 BU per call, in the Enhanced method tier on Base",
-      "100 BU per call, in the Standard method tier on Base",
-      "1000 BU per call, in the Premium tier on Base Mainnet",
+      "About 2 seconds per block on the Base Mainnet network",
+      "About 12 seconds per block, like Ethereum mainnet does",
+      "About 400 milliseconds, like the Solana mainnet block",
+      "About 30 seconds per block on Base Mainnet right now",
     ],
     answer: 0,
     explain:
-      "debug_traceTransaction is Advanced 500 BU on CDP Node. All debug_trace* methods sit in this tier.",
+      "Base targets about 2 second blocks, the standard OP Stack target. Ethereum mainnet is about 12 seconds, Solana is sub-second.",
+  },
+
+  // ───────── EXPERT (12) ─────────
+  // 4 fun, 4 product, 4 industry
+  {
+    id: "e1",
+    level: "expert",
+    topic: "company-fun-facts",
+    q: "At what price did Coinbase stock open on its first trading day?",
+    options: [
+      "$381, well above the $250 reference price level",
+      "$250, exactly the Nasdaq-set reference price level",
+      "$430, the published intraday high on listing day",
+      "$328, the published settle price on the listing day",
+    ],
+    answer: 0,
+    explain:
+      "Coinbase opened at $381 on April 14, 2021, more than 50% above the $250 reference price. It hit ~$430 intraday and settled near $328.",
   },
   {
     id: "e2",
     level: "expert",
-    topic: "billing",
-    q: "Exact BU weight for the eth_call read method on CDP Node today?",
+    topic: "company-fun-facts",
+    q: "Where did Coinbase's CEO Brian Armstrong work just before founding it?",
     options: [
-      "30 BU per call (Standard tier on Base, alongside chainId)",
-      "26 BU per call (matches the Alchemy CU figure for the call)",
-      "10 BU per call (matches the Alchemy CU price for blockNumber)",
-      "100 BU per call (matches the Enhanced tier price for getLogs)",
+      "Airbnb, where he was an engineer before launching it",
+      "Goldman Sachs, where he was a forex trader on the desk",
+      "Google, where he led the Wallet team in Mountain View",
+      "Stripe, where he was an early platform-side engineer",
     ],
     answer: 0,
     explain:
-      "eth_call is Standard 30 BU on CDP Node. 26 CU is Alchemy's published figure, not Coinbase's.",
+      "Brian Armstrong was an engineer at Airbnb before founding Coinbase. Co-founder Fred Ehrsam is the one who came from Goldman Sachs.",
   },
   {
     id: "e3",
     level: "expert",
-    topic: "billing",
-    q: "Exact BU weight for the eth_estimateGas method on CDP Node today?",
+    topic: "company-fun-facts",
+    q: "Which crypto venture firm did co-founder Fred Ehrsam later launch?",
     options: [
-      "100 BU per call, in the Enhanced method tier on Base",
-      "30 BU per call, in the Standard method tier on Base now",
-      "500 BU per call, in the Advanced method tier on Base now",
-      "250 BU per call, in the Premium tier on the Base Mainnet",
+      "Paradigm, the crypto venture fund he started in 2018",
+      "Polychain Capital, the fund Olaf Carlson-Wee started",
+      "a16z crypto, the crypto arm of Andreessen Horowitz LP",
+      "Multicoin Capital, founded by Kyle Samani in Texas",
     ],
     answer: 0,
     explain:
-      "eth_estimateGas is Enhanced 100 BU on CDP Node, alongside eth_getLogs and eth_getTransactionReceipt.",
+      "Fred Ehrsam left Coinbase in early 2017 and later co-founded Paradigm in 2018 with Matt Huang, a top crypto-focused venture fund.",
   },
   {
     id: "e4",
     level: "expert",
-    topic: "billing",
-    q: "Which BU tier does trace_replayBlockTransactions fall under here?",
+    topic: "company-fun-facts",
+    q: "Which consortium did Coinbase and Circle co-found in October 2018?",
     options: [
-      "Advanced 500 BU tier, alongside the debug_trace* methods",
+      "Centre Consortium, the original USDC governance group",
+      "Travel Rule Information Sharing Alliance (TRISA) group",
+      "Crypto Open Patent Alliance (COPA), the IP defense group",
+      "Chamber of Digital Commerce, the DC-based policy group",
+    ],
+    answer: 0,
+    explain:
+      "Coinbase and Circle co-founded the Centre Consortium in October 2018 to govern the USDC stablecoin. Centre was later wound down in 2023.",
+  },
+  {
+    id: "e5",
+    level: "expert",
+    topic: "company-products",
+    q: "How many BU does an Advanced JSON-RPC method consume per call?",
+    options: [
+      "500 BU per call (debug_trace*, eth_sendRawTransaction)",
+      "250 BU per call (matches Alchemy's eth_sendRawTransaction)",
+      "1000 BU per call (matches Chainstack's premium weights)",
+      "150 BU per call (matches QuickNode's standard credits)",
+    ],
+    answer: 0,
+    explain:
+      "Advanced methods are 500 BU per call on CDP Node. debug_traceTransaction, trace_block, eth_sendRawTransaction sit here.",
+  },
+  {
+    id: "e6",
+    level: "expert",
+    topic: "company-products",
+    q: "Which BU tier does debug_traceTransaction fall under on CDP Node?",
+    options: [
+      "Advanced 500 BU tier, alongside the trace_* method set",
       "Enhanced 100 BU tier, alongside the eth_getLogs methods",
       "Standard 30 BU tier, alongside the eth_call read methods",
       "Premium 250 BU tier, alongside eth_sendRawTransaction now",
     ],
     answer: 0,
     explain:
-      "trace_replayBlockTransactions is in the Advanced 500 BU tier with the rest of the trace_* and debug_trace* methods.",
-  },
-  {
-    id: "e5",
-    level: "expert",
-    topic: "billing",
-    q: "10 million BU equals roughly how many 100% Standard 30-BU calls?",
-    options: [
-      "About 333,000 calls per month if all are Standard 30 BU",
-      "About 100,000 calls per month if all are Standard 30 BU",
-      "About 500,000 calls per month if all are Standard 30 BU",
-      "About 750,000 calls per month if all are Standard 30 BU",
-    ],
-    answer: 0,
-    explain:
-      "10,000,000 / 30 BU per call equals about 333,000 Standard calls. This is the headline 'what 10M BU buys you' figure.",
-  },
-  {
-    id: "e6",
-    level: "expert",
-    topic: "brand",
-    q: "Which exact hex value is Coinbase's official primary brand blue?",
-    options: [
-      "#0052FF, the official Coinbase signature cobalt blue today",
-      "#1E40AF, a deep navy used by many Web3 dashboard themes",
-      "#2563EB, a vivid Tailwind blue-600 used in design systems",
-      "#3B82F6, a Tailwind blue-500 used in many dashboard themes",
-    ],
-    answer: 0,
-    explain:
-      "Coinbase's brand primary blue is #0052FF. The Tailwind blues #2563EB and #3B82F6 are common on dashboards but aren't the Coinbase mark.",
+      "debug_traceTransaction is Advanced 500 BU on CDP Node. All debug_trace* and trace_* methods sit in this tier.",
   },
   {
     id: "e7",
     level: "expert",
-    topic: "products",
+    topic: "company-products",
     q: "Which agent SDK is shipped as part of the broader CDP product line?",
     options: [
-      "AgentKit, the Coinbase Developer Platform agent toolkit SDK",
+      "AgentKit, the Coinbase Developer Platform agent toolkit",
       "OnchainKit, the Coinbase frontend React component library",
       "WalletConnect, the multi-wallet pairing protocol stack used",
       "RainbowKit, the popular React wallet connector library used",
@@ -493,89 +496,84 @@ const BANK: Question[] = [
   {
     id: "e8",
     level: "expert",
-    topic: "networks",
-    q: "What is the published target block time for the Base Mainnet today?",
+    topic: "company-products",
+    q: "What is CDP Node's published per-project rate-limit ceiling?",
     options: [
-      "About 2 seconds per block, the standard OP Stack block time",
-      "About 12 seconds per block, the standard Ethereum slot time",
-      "About 400ms per block, the published Solana mainnet target",
-      "About 250ms per block, the Arbitrum Nitro stylus block time",
+      "7,500 BU per 5 seconds, around 50 RPS at 30 BU average",
+      "5,000 BU per 5 seconds, around 30 RPS at 30 BU average",
+      "10,000 BU per 5 seconds, around 60 RPS at 30 BU average",
+      "15,000 BU per 5 seconds, around 100 RPS at 30 BU average",
     ],
     answer: 0,
     explain:
-      "Base targets 2-second blocks, the standard OP Stack target. Ethereum is 12 seconds, Solana is sub-second.",
+      "Per-project ceiling is 7,500 BU per 5 seconds, about 50 requests per second at the 30 BU Standard average.",
   },
   {
     id: "e9",
     level: "expert",
-    topic: "billing",
-    q: "Which BU tier does eth_simulateV1 fall under on the CDP Node today?",
+    topic: "industry",
+    q: "What is the consensus assumption Base inherits from the OP Stack?",
     options: [
-      "Standard 30 BU tier, alongside eth_call and eth_chainId now",
-      "Enhanced 100 BU tier, alongside eth_getLogs and receipts now",
-      "Advanced 500 BU tier, alongside the debug_trace* method set",
-      "Premium 250 BU tier, alongside eth_sendRawTransaction methods",
-    ],
-    answer: 0,
-    explain:
-      "eth_simulateV1 is in the Standard 30 BU tier per the published pricing page.",
-  },
-  {
-    id: "e10",
-    level: "expert",
-    topic: "billing",
-    q: "Which BU tier does eth_estimateUserOperationGas fall under here?",
-    options: [
-      "Advanced 500 BU tier, alongside debug_trace* and trace_* now",
-      "Enhanced 100 BU tier, alongside eth_estimateGas and getLogs",
-      "Standard 30 BU tier, alongside eth_call and other reads now",
-      "Premium 250 BU tier, alongside eth_sendRawTransaction methods",
-    ],
-    answer: 0,
-    explain:
-      "eth_estimateUserOperationGas is Advanced 500 BU. ERC-4337 user-op estimation is heavier than plain eth_estimateGas.",
-  },
-  {
-    id: "e11",
-    level: "expert",
-    topic: "company",
-    q: "What makes CDP Node infrastructure stand out vs other Base RPC vendors?",
-    options: [
-      "Same node infra that powers Coinbase's retail exchange today",
-      "Same node infra that powers QuickNode's marketplace endpoints",
-      "Same node infra that powers BlockDaemon's enterprise endpoints",
-      "Same node infra that powers Tenderly's Virtual TestNet endpoints",
-    ],
-    answer: 0,
-    explain:
-      "CDP runs on the same node infrastructure that powers Coinbase's retail exchange. That is the published credibility hook.",
-  },
-  {
-    id: "e12",
-    level: "expert",
-    topic: "networks",
-    q: "What is the consensus assumption Base inherits from the OP Stack today?",
-    options: [
-      "A sequencer-based rollup model with later fraud-proof finality",
-      "A validator set proof-of-stake style consensus, like Ethereum L1",
-      "A delegated proof-of-stake style consensus, like BNB Chain L1",
-      "A proof-of-history style consensus, like the Solana mainnet L1",
+      "A sequencer-based rollup with later fraud-proof finality",
+      "A validator-set proof-of-stake consensus, like Ethereum L1",
+      "A delegated proof-of-stake consensus, like the BNB Chain L1",
+      "A proof-of-history style consensus, like the Solana mainnet",
     ],
     answer: 0,
     explain:
       "OP Stack rollups are sequencer-based. Today the sequencer is centralized, with fraud-proof finality posted to Ethereum L1.",
   },
+  {
+    id: "e10",
+    level: "expert",
+    topic: "industry",
+    q: "What is the main purpose of Ethereum's EIP-4844 'blobs' upgrade?",
+    options: [
+      "Cheaper L2 data availability for rollups like Base now",
+      "Cheaper L1 calldata for plain ERC-20 transfers on the L1",
+      "Faster L1 block times by halving the standard slot length",
+      "Smaller L1 state proofs sent over the standard libp2p pipe",
+    ],
+    answer: 0,
+    explain:
+      "EIP-4844 (proto-danksharding) added 'blob' transactions, giving rollups like Base much cheaper data availability on Ethereum L1.",
+  },
+  {
+    id: "e11",
+    level: "expert",
+    topic: "industry",
+    q: "What does ERC-4337 standardize on EVM chains, including Base today?",
+    options: [
+      "Account abstraction with user ops and smart wallet flows",
+      "An NFT royalty registry standard for marketplaces on EVM",
+      "A token bridge standard for cross-chain canonical mints now",
+      "A new gas-token standard for L2 sequencer fee bidding now",
+    ],
+    answer: 0,
+    explain:
+      "ERC-4337 standardizes account abstraction on EVM chains via user operations and bundlers, enabling smart-wallet flows like Coinbase Smart Wallet.",
+  },
+  {
+    id: "e12",
+    level: "expert",
+    topic: "industry",
+    q: "What is the published target block time for Ethereum L1 mainnet?",
+    options: [
+      "About 12 seconds per slot, the standard L1 slot timing",
+      "About 2 seconds per slot, the standard OP Stack timing",
+      "About 400ms per slot, the standard Solana mainnet timing",
+      "About 250ms per slot, the standard Arbitrum Nitro timing",
+    ],
+    answer: 0,
+    explain:
+      "Ethereum L1 targets a 12 second slot. Base (and other OP Stack rollups) target 2 seconds; Solana targets sub-second slots.",
+  },
 ];
 
 const TOPIC_LABEL: Record<string, string> = {
-  company: "Coinbase Cloud and CDP",
-  networks: "Base Mainnet and Sepolia",
-  rpc: "JSON-RPC and node basics",
-  billing: "BU pricing and weights",
-  pricing: "Free tier and overage",
-  products: "Paymaster, Webhooks, AgentKit",
-  wallet: "Server Wallet and Embedded Wallet",
-  brand: "Coinbase brand and design",
+  "company-fun-facts": "Coinbase company fun facts",
+  "company-products": "CDP product line",
+  industry: "Industry and technical",
 };
 
 // ── Helpers ────────────────────────────────────────────────
